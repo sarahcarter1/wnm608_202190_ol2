@@ -235,7 +235,7 @@ a:hover {
     padding: 6rem calc((100vw - 1200px) / 2);
 }
 
-.about__img {
+.about__img { 
     width: 80%;
     height: 80%;
     padding: 2em;
