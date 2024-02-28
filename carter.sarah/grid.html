@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cool Website</title>
+
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/gridstyleguide.css">
+        <link rel="stylesheet" href="css/gridstoretheme.css">
+        <link rel="gridsystem" href="css/gridsystem.css">
+    </head>
+    <body>
+
+        <!--header>h1+p -->
+        <header class="navbar">
+            <div class="container display-flex">
+                <div class="flex-none">
+                    <h1>Cool Website</h1>
+                </div>
+                <div class="flex-stretch"></div>
+                <nav class="flex-none nav">
+                    <ul class="container display-flex">
+                        <li><a href="#article1">Link 1</a></li>
+                        <li><a href="#article2">Link 2</a></li>
+                        <li><a href="#article3">Link 3</a></li>
+                        <li><a href="#article4">Link 4</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- grid -->
+        <div class="container">
+            <div class="card soft">
+                <h2>Grid</h2>
+            <div class="grid">
+                <div class="col-xs-6">column 6</div>
+                <div class="col-xs-6">column 6</div>
+            </div>
+            <div class="grid gap xs-small md-medium">
+                <div class="col-xs-4">column 4</div> <! -- command c a line of code to make copies -->
+                <div class="col-xs-4">column 4</div> <! -xs-- command d is change a number -->
+                <div class="col-xs-4">column 4</div>
+
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-3">column 3</div>
+
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-6">column 6</div>
+                <div class="col-xs-3">column 3</div>
+                
+            </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card soft">
+                <h2>Responsive Grid</h2>
+            <div class="grid">
+                <div class="col-xs-12 col-md-6">column 6</div>
+                <div class="col-xs-12 col-md-6">column 6</div>
+            </div>
+            <div class="grid">
+                <div class="col-xs-12 col-md-4 col-xl-3">column 4</div> <! -- command c a line of code to make copies -->
+                <div class="col-xs-12 col-md-4 col-xl-6">column 4</div> <! -- command d is change a number -->
+                <div class="col-xs-12 col-md-4 col-xl-3">column 4</div>
+
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-3">column 3</div>
+                <div class="col-xs-3">column 3</div>
+            </div>
+            <div class="grid ten gap">
+                <div class="col-xs-2">column 2</div>
+                <div class="col-xs-2">column 2</div>
+                <div class="col-xs-2">column 2</div>
+                <div class="col-xs-2">column 2</div>
+                <div class="col-xs-2">column 2</div>
+
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Responsive Cards -->
+
+        <div class="container">
+            <div class="grid gap xs-small md-medium">
+                <!-- .col-xs-6.col-md-3*4>.card>{Card}-->
+                <div class="col-xs-6 col-md-3">
+                    <div class="card soft">
+                        <img src="https://via.placeholder.com/500" alt="" class="media-image">
+                    </div>
+                    
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <div class="card soft"> 
+                        <img src="https://via.placeholder.com/500" alt="" class="media-image"> 
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <div class="card soft"> 
+                        <img src="https://via.placeholder.com/500" alt="" class="media-image">
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-3">
+                    <div class="card soft"> 
+                        <img src="https://via.placeholder.com/500" alt="" class="media-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- .container>article#article$.article*4>h2{Article $}+div.article-body>p*3>Lorem40 -->
+        <div class="container">
+            <article id="article1" class="article card soft">
+                <div class="display-flex flex-align-center">
+                    <div class="flex-stretch">
+                        <h2>Article1</h2>
+                    </div>
+                    <div class="flex-none">
+                        <small>5:20am</small>
+                    </div>
+                </div>
+                <div class="article-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                </div>
+            </article>
+            <article id="article2" class="article">
+                <h2>Article2</h2>
+                <div class="article-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                </div>
+            </article>
+            <article id="article3" class="article">
+                <h2>Article3</h2>
+                <div class="article-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                </div>
+            </article>
+            <article id="article4" class="article">
+                <h2>Article4</h2>
+                <div class="article-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                        Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                        non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                        cum tempore?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eos commodi libero rerum vero. 
+                            Veritatis omnis amet dolore qui tenetur nihil earum sapiente. Dolorum consequuntur, numquam 
+                            non illo odit, quo, fugit earum vitae cumque perspiciatis repellendus distinctio! Nostrum, 
+                            cum tempore?</p>
+                </div>
+            </article>
+        </div>
+
+    </body>
+</html>
