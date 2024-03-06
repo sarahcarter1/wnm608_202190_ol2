@@ -222,6 +222,7 @@ a:hover {
     color: var(--color-neutral-medium);
     display:block;
     width:100%;
+    padding:0.5em;
 }
 
 .form-button{
