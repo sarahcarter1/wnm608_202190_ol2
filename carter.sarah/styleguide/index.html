@@ -30,8 +30,9 @@
             </div>
         </header>
 
-        <div class="container">
-        <div class="card soft" id="headings">
+    <div class="container">
+        
+            <div class="card soft" id="headings">
             <h1>Color Palette</h1>
 
             <div class="grid gap">
@@ -72,49 +73,143 @@
                 </div>
         </div>
     </div>
-    </div>
 
     <div class="container" id="typography">
    
     
-      <div class="card soft" id="headings">
-        <h1>Font Type</h1>
-        <h2>Montserrat</h2>
-        <h4>Nunito Sans</h4>
+        <div class="card soft" id="headings">
+          <h1>Font Type</h1>
+          <h2>Montserrat</h2>
+          <h4>Nunito Sans</h4>
+        </div>
       </div>
+  
+       <script>
+          const makeTable = (classes='') => {
+              const head = ['','Name','Font weight','Font size','Line height'];
+              const body = [
+                  ['Heading 1',"Bold/Medium",'32px','1.3x font size'],
+                  ['Heading 2',"Bold/Medium",'28px','1.3x font size'],
+                  ['Heading 3',"Bold/Medium",'24px','1.3x font size'],
+                  ['Heading 4',"Bold/Medium",'18px','1.3x font size'],
+                  ['Heading 5',"Bold/Medium",'16px','1.3x font size'],
+              ];
+  
+              // let ran = Math.floor(Math.random()*links.length);
+              document.write(`
+              <table class="${classes}">
+                  <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+                  <tbody>${body.reduce((r,o,i)=>r+
+                      `<tr>${
+                          [i+0,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
+                      }</tr>`,'')
+                  }</tbody>
+              </table>
+              `);
+          }
+       </script>
+ 
+ <div class="container">
+
+    <div class="card soft">
+        <h1>Font Size</h1>
+        <script>makeTable("table")</script>
     </div>
+</div>
 
-     <script>
-        const makeTable = (classes='') => {
-            const head = ['','Name','Font weight','Font size','Line height'];
-            const body = [
-                ['Heading 1',"Bold/Medium",'32px','1.3x font size'],
-                ['Heading 2',"Bold/Medium",'28px','1.3x font size'],
-                ['Heading 3',"Bold/Medium",'24px','1.3x font size'],
-                ['Heading 4',"Bold/Medium",'18px','1.3x font size'],
-                ['Heading 5',"Bold/Medium",'16px','1.3x font size'],
-            ];
+<div class="container" id="forms">
 
-            // let ran = Math.floor(Math.random()*links.length);
-            document.write(`
-            <table class="${classes}">
-                <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
-                <tbody>${body.reduce((r,o,i)=>r+
-                    `<tr>${
-                        [i+0,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
-                    }</tr>`,'')
-                }</tbody>
-            </table>
-            `);
-        }
-     </script>
+    <div class="card soft">
+        <h1>Inputs</h1>
+        <h3>Form Inputs</h3>
+        <form>
+            <input type="username" placeholder= "Username" class="form-input"><br>
+            <input type="password" placeholder= "Password" class="form-input"><br>
+        </form>
 
-     <div class="container">
+        <h3>Form Label</h3>
+        <form>
+            <label class="form-label">Street Address</label>
+            <input type="text" placeholder= "Text" class="form-input"><br>
+            <label class="form-label">Zip Code</label>
+            <input type="number" placeholder= "Number" class="form-input"><br>
+        </form>
 
-            <div class="card soft">
-                <h1>Font Size</h1>
-                <script>makeTable("table")</script>
+        <h3>Form Control</h3>
+        <form>
+            <div class="form-control display-flex flex-align-center">
+                <div class="flex-none">
+                    <label class="form-label">&#x1F50D;</label>
+                </div>
+                <div class="flex-stretch">
+                    <input type="search" placeholder= "Search" class="form-input">
+                </div>
             </div>
+            </form>
     </div>
+
+
+
+    <div class="card soft">
+        <h1>Buttons</h1>
+        <h3>Form Button</h3>
+
+        <div class="form-control">
+            <button type="button" class="form-button">Add To Cart</button>
+        </div>
+
+    </div>
+
+
+
+<div class="card soft">
+    <h1 id="select">Select</h1>
+    <div class="display-flex">
+        <div class="flex-none">
+            <label for="form-select">Product Quantity</label>
+            <div class="form-select">
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+<div class="card soft">
+    <h1 id="checkboxes">Check Boxes</h1>
+    <label>Select Product<input type="checkbox" id="input-1"></label>
+
+    <h3>Like Product</h3>
+    <div class="favorite">
+        <input type="checkbox" id="heart-example" class="hidden">
+        <label for="heart-example">&hearts;</label>
+    </div>
+
+    <h3>Toggle</h3>
+    <div class="toggle">
+        <input type="checkbox" id="toggle-1" class="hidden">
+        <label for="toggle-1"></label>
+    </div>
+    <div class="display-flex flex-align-center">
+        <div class="flex-stretch">
+            <label for="toggle-2" class="form-label">Display Warning?</label>
+        </div>
+        <div class="flex-none">
+            <div class="toggle" style="font-size:2em">
+                <input type="checkbox" id="toggle-2" class="hidden">
+                <label for="toggle-2"></label>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+   
 </body>
 </html>
