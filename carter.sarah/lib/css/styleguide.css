@@ -197,6 +197,7 @@ a:hover {
 .hotdog,
 .form-button,
 .form-input,
+.form-input-error,
 .form-item {
     display: inline-block;
     background-color: transparent; 
@@ -213,6 +214,12 @@ a:hover {
 
 }
 
+.form-input-error{
+    border-bottom: 1px solid red;
+    padding: 0.5em 1em;
+
+}
+
 .form-input:focus {
     border-bottom-color:var(--color-main-light);
 }
@@ -220,6 +227,14 @@ a:hover {
 .form-label {
     font-size:0.8em;
     color: var(--color-neutral-medium);
+    display:block;
+    width:100%;
+    padding:0.5em;
+}
+
+.form-label-error {
+    color: red;
+    font-size:0.8em;
     display:block;
     width:100%;
     padding:0.5em;
