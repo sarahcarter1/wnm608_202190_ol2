@@ -80,42 +80,25 @@
         <div class="card soft" id="headings">
           <h1>Font Type</h1>
           <h2>Montserrat</h2>
-          <h4>Nunito Sans</h4>
+          <h7>Nunito Sans</h7>
         </div>
       </div>
-  
-       <script>
-          const makeTable = (classes='') => {
-              const head = ['','Name','Font weight','Font size','Line height'];
-              const body = [
-                  ['Heading 1',"Bold/Medium",'32px','1.3x font size'],
-                  ['Heading 2',"Bold/Medium",'28px','1.3x font size'],
-                  ['Heading 3',"Bold/Medium",'24px','1.3x font size'],
-                  ['Heading 4',"Bold/Medium",'18px','1.3x font size'],
-                  ['Heading 5',"Bold/Medium",'16px','1.3x font size'],
-              ];
-  
-              // let ran = Math.floor(Math.random()*links.length);
-              document.write(`
-              <table class="${classes}">
-                  <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
-                  <tbody>${body.reduce((r,o,i)=>r+
-                      `<tr>${
-                          [i+0,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')
-                      }</tr>`,'')
-                  }</tbody>
-              </table>
-              `);
-          }
-       </script>
- 
- <div class="container">
 
-    <div class="card soft">
-        <h1>Font Size</h1>
-        <script>makeTable("table")</script>
-    </div>
-</div>
+      <div class="container" id="typography">
+        <h2>Typography</h2>
+        
+          <div class="card soft" id="headings">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </div>
+
+        
+        </div>
+  
 
 <div class="container" id="forms">
 
