@@ -124,6 +124,86 @@ a:hover {
 
 .hidden { display:none; }
 
+.nav ul {
+    list-style-type:none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+    .nav a {
+        display:block;
+        padding:0.2em 0.5em;
+    }
+    .nav a:hover {
+        background-color: var(--color-main-medium);
+        color: var(--color-white);
+        text-decoration: none;
+    }
+    .nav .active a {
+        color: inherit;
+    }
+
+.nav-material ul,
+.nav-crumbs ul,
+.nav-pills ul,
+.nav-stretch ul,
+.nav-flex ul {
+    display: flex;
+}
+
+.nav-material li {
+    flex: 1 1 auto;
+    text-align:center;
+}
+
+.nav-pills a {
+    border-radius:2em;
+    padding: 0.5em 1em;
+}
+
+
+.nav-crumbs a {
+    display:inline-block;
+}
+
+.nav-crumbs .active a,
+.nav-crumbs a:hover {
+    background-color:transparent;
+    color:inherit;
+    text-decoration:underline;
+}
+
+
+.nav-crumbs li:not(:first-child)::before {
+    content:'/';
+}
+
+.nav-material a {
+    padding: 0.5em 1em;
+    position:relative;
+}
+
+.nav-material a:hover {
+    background-color:var(--color-white);
+    color:inherit;
+}
+
+.nav-material a::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:0;
+    background-color:var(--color-main-medium);
+    transition: all 0.3s;
+}
+
+
+.nav-material .active a::after {
+    height: 4px;
+}
+
 
 
 .navbar {

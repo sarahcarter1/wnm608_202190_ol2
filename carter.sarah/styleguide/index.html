@@ -85,7 +85,6 @@
       </div>
 
       <div class="container" id="typography">
-        <h2>Typography</h2>
         
           <div class="card soft" id="headings">
             <h1>Heading 1</h1>
@@ -98,6 +97,50 @@
 
         
         </div>
+
+        <div class="container" id="navigations">
+            <h2>Navigations</h2>
+    
+            <script>
+                const makeNav = (classes='') => {
+                    const links = ['home','store','about'];
+                    let ran = Math.floor(Math.random()*links.length);
+                    document.write(`
+                    <div>
+                        <nav class="${classes}">
+                            <ul>
+                            ${links.reduce((r,o,i)=>{
+                                return r+`<li class="${ran==i?'active':''}"><a href="#">${o}</a></li>`;
+                            },'')}
+                            </ul>
+                        </nav>
+                        </div>
+                    `);
+                }
+            </script>
+    
+    
+            <div class="card soft">
+                <h3>Crumbs Nav</h3>
+    
+                <script>makeNav('nav nav-crumbs')</script>
+            </div>
+    
+            <div class="card soft">
+                <h3>Material Nav</h3>
+    
+                <script>makeNav('nav nav-material')</script>
+            </div>
+    
+            <script>
+                $("#navigations a").on("click",function(e){
+                    e.preventDefault();
+                    $(this).closest("li").addClass("active")
+                        .siblings().removeClass("active")
+                })
+            </script>
+    
+         </div>
   
 
 <div class="container" id="forms">
