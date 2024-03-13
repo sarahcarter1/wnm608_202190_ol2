@@ -443,3 +443,78 @@ a:hover {
     text-align:left;
     padding:0.2em 0.5em;
 }
+
+figcaption{
+    display: block;
+}
+
+figure {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+
+/* Figure */
+.figure {
+    margin:0;
+    background-color:var(--color-white);
+}
+.figure img {
+    width: 100%;
+    vertical-align: text-bottom;
+}
+.figure figcaption {
+    padding:1em;
+}
+
+.figure.product {
+    border-radius:0.5em;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    overflow:hidden;
+}
+
+.product-overlay {
+    position:relative;
+    overflow:hidden;
+}
+
+.product-overlay figcaption {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    opacity:0;
+    transition:all 0.3s;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-overlay:hover figcaption {
+    opacity:1;
+}
+
+.product-overlay .caption-body {
+    background-color:white;
+    border-radius:0.5em;
+    padding:1em;
+    transform:translateY(2em);
+    transition:all 0.3s;
+}
+
+.product-overlay:hover .caption-body {
+    transform:translateY(0);
+}
+
+.product-overlay img {
+    transform:scale(1,1);
+    transition:all 0.3s;
+}
+
+.product-overlay:hover img {
+    transform:scale(1.4,1.4);
+}
