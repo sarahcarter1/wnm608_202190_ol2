@@ -3,6 +3,7 @@
 .grid {
     display:grid;
     grid-template-columns: repeat(12, 1fr);
+    padding-bottom: 1em;
 }
     .grid.ten {
         grid-template-columns: repeat(10, 1fr);
