@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Muggies</title>
+
+    <?php include "parts/meta.php"; ?>
+    <?php include "parts/css.php";?>
+
+</head>
+<body>
+
+    <?php include "parts/navbar.php"; ?>
+
+    <!-- Header header>h1+p -->
+    <header class="navbar">
+        <div class="container display-flex">
+        <div class="flex-none">
+            <h1> </h1>
+        </div>
+        <div class="flex-stretch"></div>
+     <nav class="flex-none nav">
+        <ul class="container display-flex">
+            <li><a href="#article1">Animals</a></li>
+            <li><a href="#article2">Gift Ideas</a></li>
+            <li><a href="#article3">Account</a></li>
+            <li><a href="#article4">Cart</a></li>
+        </ul>
+     </nav>
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" style="background-image:url('img/hero 2.jpg')"> 
+        <div class="hero__content">
+            <h1>FurBaby</h1>
+            <p>Snuggable | Huggable | Loveable</p>
+            <button class="button">Shop New In</button>
+        </div>
+    </div>
+
+     <!-- Products Section -->  
+     <div class="products">
+        <h1>Best Sellers</h1>
+        <div class="products__wrapper">
+            <div class="products__card">
+                <div class="products__title">
+                    <img src="./img/octopus1.jpg" alt="octopus" class="products__img">   
+                    <h3>Octopus FurBaby</h3>
+                </div>
+                <div class="products__perks">
+                    <p>$29.99</p>
+                </div>
+                <button class="products__button">ADD TO CART</button>
+            </div>
+            <div class="products__card">
+                <div class="products__title">
+                    <img src="./img/bear1.jpg" alt="bear" class="products__img">   
+                    <h3>Bear FurBaby</h3>
+                </div>
+                <div class="products__perks">
+                    <p>$29.99</p>
+                </div>
+                <button class="products__button">ADD TO CART</button>
+            </div>
+            <div class="products__card">
+                <div class="products__title">
+                    <img src="./img/kitty1.jpg" alt="kitty" class="products__img">   
+                    <h3>Cat FurBaby</h3>
+                </div>
+                <div class="products__perks">
+                    <p>$29.99</p>
+                </div>
+                <button class="products__button">ADD TO CART</button>
+            </div>
+        </div>
+      </div>   
+
+      <!--View Window--> 
+
+    <div class="view-window" style="background-image:url('img/hero_1.png')"> 
+    
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+        <div class="display-flex flex-align-center">
+            <div class="flex-stretch">
+                <h1 class="about__heading">The FurBaby Difference</h1>
+                <p class="about__content">Simply heat FurBaby in the microwave or chill in the freezer
+                    to enjoy the therapeutic benefits and the calming scent of real French lavendar. Cuddly companions
+                    for kids and wellness products for all.
+                    </p>
+            </div>
+            <div class="flex-none">
+                <img src="./img/baby.jpg" alt="furbaby" class="about__img">    
+            </div>
+        </div>
+        </div>
+
+         <!-- Newsletter Section -->
+      <div class="newsletter">
+        <div class="newsletter__content">
+            <h1>FurBaby Newsletter</h1>
+            <p>Sign up for our newsletter to get 20% off your first order!</p>
+            <form action="#">
+                <div class="form__wrap">
+                    <label for="email">
+                        <input type="email" placeholder="Enter your email" id="email">
+                    </label>
+                    <button class="button" type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+      </div>
+
+          <!-- Footer Section -->
+      <div class="footer"> 
+        <div class="footer__wrapper">
+            <div class="footer__desc">
+                <h1>FurBaby</h1>
+                <p>Located in Irvine, California</p>
+                <p id="phone">714-923-9873</p>
+            </div>
+            <div class="footer__links">
+                <a href="/" class="footer__link">FAQ</a>
+                <a href="/" class="footer__link">Delivery</a>
+                <a href="/" class="footer__link">Returns</a>
+            </div>
+        </div>
+        <div class="footer__wrapper">
+            <div class="footer__links">
+                <a href="/" class="footer__link">Blog</a>
+                <a href="/" class="footer__link">Name Generator</a>
+                <a href="/" class="footer__link">FurBaby Quiz</a>
+            </div>
+            <div class="footer__links">
+                <a href="/" class="footer__link">Privacy Policy</a>
+                <a href="/" class="footer__link">Terms and Conditions</a>
+                <a href="/" class="footer__link">Accessibility</a>
+            </div>
+        </div>
+      </div>
+    
+</body>
+</html>
