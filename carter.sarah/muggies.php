@@ -6,7 +6,7 @@
 
     <?php include "parts/meta.php"; ?>
     <?php include "parts/css.php";?>
-    <?php include "parts/footer.php";?>
+ 
 
 
 </head>
@@ -101,8 +101,9 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
             <img src="img/placeholder_about.jpg" alt="">
         </div>
-        
     </div>
+
+    <?php include "parts/footer.php";?>
     
 </body>
 </html>

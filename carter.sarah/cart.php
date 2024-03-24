@@ -6,7 +6,7 @@
 
     <?php include "parts/meta.php"; ?>
     <?php include "parts/css.php";?>
-    <?php include "parts/footer.php";?>
+   
 
 </head>
 <body>
@@ -112,7 +112,7 @@
 
 
 
-     
+    <?php include "parts/footer.php";?>
     
 </body>
 </html>
