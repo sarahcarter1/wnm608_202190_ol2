@@ -1,29 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Account</title>
+
+    <title>Muggies</title>
 
     <?php include "parts/meta.php"; ?>
-
-        <link rel="stylesheet" href="lib/css/styleguide.css">
-        <link rel="stylesheet" href="lib/css/gridsystem.css">
-        <link rel="stylesheet" href="css/storetheme.css">
-        <link rel="stylesheet" href="https://use.typekit.net/rue3okm.css">
-        <link rel="stylesheet" href="https://use.typekit.net/rue3okm.css">
-
+    <?php include "parts/css.php";?>
 
 </head>
 <body>
 
     <?php include "parts/navbar.php"; ?>
 
-    <div class="container">
-        <div class="card soft">
-            <h2>Account</h2>
+    <!-- Products Section -->  
+<div class="container_products" id="forms">
+
+<h1>Account Details</h1>
+<p>Lorem ipsum dolor sit amet, consectetur<p>
+
+<h1>Admin Section</h1>
+<p>Lorem ipsum dolor sit amet, consectetur<p>
+
+<div class="container_products">
+        <div class="grid gap">
             
+       
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+        
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+            <a href="product_item.php">
+                <figure class="figure product">
+                    <img src="img/placeholder_mug.jpg" alt="">
+                    <figcaption>
+                        <div class="productname">Product Name</div>
+                        <div class="price">Price</div>
+                    </figcaption>
+                </figure>
+            </a>
+            </div>
+
         </div>
     </div>
+</div>    
+
+
+
+          <!-- Footer Section -->
+      <div class="footer"> 
+        <div class="footer__wrapper">
+            <div class="footer__desc">
+                <h1>Footer</h1>
+                <p>Location</p>
+                <p id="phone">Phone Number</p>
+            </div>
+            <div class="footer__links">
+                <a href="/" class="footer__link">Link</a>
+                <a href="/" class="footer__link">Link</a>
+                <a href="/" class="footer__link">Link</a>
+            </div>
+        </div>
+        <div class="footer__wrapper">
+            <div class="footer__links">
+                <a href="/" class="footer__link">Link</a>
+                <a href="/" class="footer__link">Link</a>
+                <a href="/" class="footer__link">Link</a>
+            </div>
+            <div class="footer__links">
+                <a href="/" class="footer__link">Link</a>
+                <a href="/" class="footer__link">Link</a>
+                <a href="/" class="footer__link">Link</a>
+            </div>
+        </div>
+      </div>
     
 </body>
 </html>

@@ -3,14 +3,15 @@
 .grid {
     display:grid;
     grid-template-columns: repeat(12, 1fr);
-    padding-bottom: 1em;
+    padding-bottom: 5em;
+    padding-top: 5em;
 }
     .grid.ten {
         grid-template-columns: repeat(10, 1fr);
     }
 
 .grid.gap {
-    --grid-gap: 1em;
+    --grid-gap: 2em;
     grid-gap:var(--grid-gap);
     gap:var(--grid-gap);
 }
