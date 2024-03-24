@@ -6,6 +6,8 @@
 
     <?php include "parts/meta.php"; ?>
     <?php include "parts/css.php";?>
+    <?php include "parts/footer.php";?>
+
 
 </head>
 <body>
@@ -101,34 +103,6 @@
         </div>
         
     </div>
-
-          <!-- Footer Section -->
-      <div class="footer"> 
-        <div class="footer__wrapper">
-            <div class="footer__desc">
-                <h1>Footer</h1>
-                <p>Location</p>
-                <p id="phone">Phone Number</p>
-            </div>
-            <div class="footer__links">
-                <a href="/" class="footer__link">Link</a>
-                <a href="/" class="footer__link">Link</a>
-                <a href="/" class="footer__link">Link</a>
-            </div>
-        </div>
-        <div class="footer__wrapper">
-            <div class="footer__links">
-                <a href="/" class="footer__link">Link</a>
-                <a href="/" class="footer__link">Link</a>
-                <a href="/" class="footer__link">Link</a>
-            </div>
-            <div class="footer__links">
-                <a href="/" class="footer__link">Link</a>
-                <a href="/" class="footer__link">Link</a>
-                <a href="/" class="footer__link">Link</a>
-            </div>
-        </div>
-      </div>
     
 </body>
 </html>

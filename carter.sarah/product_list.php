@@ -6,6 +6,7 @@
 
     <?php include "parts/meta.php"; ?>
     <?php include "parts/css.php";?>
+    <?php include "parts/footer.php";?>
 
 </head>
 <body>
@@ -17,7 +18,7 @@
     <!-- Hero Section -->
     <div class="hero" style="background-image:url('img/placeholder_hero1.jpg')"> 
         <div class="hero__content">
-            <h1>Mugs & Cups</h1>
+            <h1>Mugs</h1>
         </div>
     </div>
 

@@ -6,6 +6,7 @@
 
     <?php include "parts/meta.php"; ?>
     <?php include "parts/css.php";?>
+    <?php include "parts/footer.php";?>
 
 </head>
 <body>
