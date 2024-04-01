@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <title>Muggies</title>
+    <title>Muggies</title>  
 
     <?php include "parts/meta.php"; ?>
     <?php include "parts/css.php";?>
