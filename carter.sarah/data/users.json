@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Sarah Carter",
+        "type":"Student",
+        "email":"noreply@gmail.com",
+        "classes":[608,617,820]
+    },
+    {
+        "name":"Daniel Sours",
+        "type":"Student",
+        "email":"noreply@gmail.com",
+        "classes":[608,617,601,820]
+    },
+    {
+        "name":"Kim Ibarra",
+        "type":"Student",
+        "email":"noreply@gmail.com",
+        "classes":[608,617,601,820]
+    },
+    {
+        "name":"Jasmine Han",
+        "type":"Student",
+        "email":"noreply@gmail.com",
+        "classes":[608,617,601,820]
+    },
+    {
+        "name":"Elise Barsch",
+        "type":"Student",
+        "email":"noreply@gmail.com",
+        "classes":[608,617,601,820]
+    }
+]
