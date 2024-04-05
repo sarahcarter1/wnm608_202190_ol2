@@ -22,21 +22,25 @@ function showUserPage($user) {
             <li><a href="users.php">Back</a></li>
         </ul>
     </nav>
-    <div>
-        <h2>$user->name</h2>
-        <div>
-            <strong>Type</strong>
-            <span>$user->type</span>
+    <form>
+       
+        <div class="form-control">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-input" value="$user->name"><br>
         </div>
-        <div>
-            <strong>Email</strong>
-            <span>$user->email</span>
+        <div class="form-control">
+            <label class="form-label">Type</label>
+            <input type="text" class="form-input" value="$user->type"><br>
         </div>
-        <div>
-            <strong>Classes</strong>
-            <span>$classes</span>
+        <div class="form-control">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-input" value="$user->email"><br>
         </div>
-    </div>
+        <div class="form-control">
+            <label class="form-label">Classes</label>
+            <input type="text" class="form-input" value="$classes">
+        </div>
+    </form>
     HTML;
 }
 
