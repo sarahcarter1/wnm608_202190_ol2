@@ -15,6 +15,7 @@ function showUserPage($user) {
 
     $classes = implode(",", $user->classes);
 
+
     // heredoc
     echo <<<HTML
     <nav class="nav nav-crumbs">
@@ -22,23 +23,27 @@ function showUserPage($user) {
             <li><a href="users.php">Back</a></li>
         </ul>
     </nav>
-    <form>
+
+    <form method="POST" action="">
        
         <div class="form-control">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-input" value="$user->name"><br>
+            <label class="form-label" for="name">Name</label>
+            <input type="text" class="form-input" value="$user->name" name="name" id="name" placeholder="John"><br>
         </div>
         <div class="form-control">
-            <label class="form-label">Type</label>
-            <input type="text" class="form-input" value="$user->type"><br>
+            <label class="form-label" for="role">Role</label>
+            <input type="text" class="form-input" value="$user->role" name="role" id="role" placeholder="ex. Student, Teacher"><br>
         </div>
         <div class="form-control">
-            <label class="form-label">Email</label>
-            <input type="text" class="form-input" value="$user->email"><br>
+            <label class="form-label" for="user-email">Email</label>
+            <input type="text" class="form-input" value="$user->email" name="email" id="email" placeholder="xxx@gmail.com"><br>
         </div>
         <div class="form-control">
-            <label class="form-label">Classes</label>
-            <input type="text" class="form-input" value="$classes">
+            <label class="form-label" for="user-classes">Classes</label>
+            <input type="text" class="form-input" value="$classes" name="classes" id="classes" placeholder="ex. 100, 101, 102">
+        </div>
+        <div class="form-control">
+            <input type="submit" class="form-button" value="Save">
         </div>
     </form>
     HTML;
