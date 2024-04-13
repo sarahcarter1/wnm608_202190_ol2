@@ -2,50 +2,125 @@
 
 include"../lib/php/functions.php";
 
+$filename = "../data/users.json";
 $users = file_get_json("../data/users.json");
+
+
+$empty_user = (object)[
+    "name" => "",
+    "role" => "",
+    "email" => "",
+    "classes" => [],
+];
 
 
 
 // file_put_contents json_encode explode $_POST
 // CRUD, Create Read Update Delete
 
+//print_p([$_GET,$_POST]);
 
+if(isset($_GET['action'])) {
+    switch($_GET['action']) {
+        case "update":
+            $users[$_GET['id']]->name = $_POST['user-name'];
+            $users[$_GET['id']]->role = $_POST['user-role'];
+            $users[$_GET['id']]->email = $_POST['user-email'];
+            $users[$_GET['id']]->classes = explode(", ", $_POST['user-classes']);
+        
+            file_put_contents($filename,json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id={$_GET['id']}");
+            break;
+        case "create":
+            $empty_user->name = $_POST['user-name'];
+            $empty_user->role = $_POST['user-role'];
+            $empty_user->email = $_POST['user-email'];
+            $empty_user->classes = explode(", ", $_POST['user-classes']);
+            
+            $id = count($users);
+            
+            $users[] = $empty_user;
+
+            file_put_contents($filename,json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}?id=$id");
+            break;
+        case "delete":
+            array_splice($users,$_GET['id'],1);
+            file_put_contents($filename,json_encode($users));
+            header("location:{$_SERVER['PHP_SELF']}");
+            break;
+    }
+}
 
 function showUserPage($user) {
 
-    $classes = implode(",", $user->classes);
+    $id = $_GET['id'];
+    $addoredit = $id == "new" ? "Add" : "Edit";
+    $createorupdate = $id == "new" ? "create" : "update";
+    $classes = implode(", ", $user->classes);
 
 
     // heredoc
-    echo <<<HTML
-    <nav class="nav nav-crumbs">
-        <ul>
-            <li><a href="users.php">Back</a></li>
-        </ul>
-    </nav>
+    $display = <<<HTML
+    <div>
+        <h2>$user->name</h2>
+        <div>
+            <strong>Role</strong>
+            <span>$user->role</span>
+        </div>
+        <div>
+            <strong>Email</strong>
+            <span>$user->email</span>
+        </div>
+        <div>
+            <strong>Classes</strong>
+            <span>$classes</span>
+        </div>
+    </div>
+    HTML;
 
-    <form method="POST" action="">
-       
+    $form = <<<HTML
+    <form method="post" action="{$_SERVER['PHP_SELF']}?id=$id&action=$createorupdate">
+        <h2>$addoredit User</h2>
         <div class="form-control">
-            <label class="form-label" for="name">Name</label>
-            <input type="text" class="form-input" value="$user->name" name="name" id="name" placeholder="John"><br>
+            <label class="form-label" for="user-name">Name</label>
+            <input class="form-input" name="user-name" id="user-name" type="text" value="$user->name" placeholder="John"><br>
         </div>
         <div class="form-control">
-            <label class="form-label" for="role">Role</label>
-            <input type="text" class="form-input" value="$user->role" name="role" id="role" placeholder="ex. Student, Teacher"><br>
+            <label class="form-label" for="user-role">Role</label>
+            <input class="form-input" name="user-role" id="user-role" type="text" value="$user->role" placeholder="ex. Student, Teacher"><br>
         </div>
         <div class="form-control">
             <label class="form-label" for="user-email">Email</label>
-            <input type="text" class="form-input" value="$user->email" name="email" id="email" placeholder="xxx@gmail.com"><br>
+            <input class="form-input" name="user-email" id="user-email" type="text" value="$user->email" placeholder="xxx@gmail.com"><br>
         </div>
         <div class="form-control">
             <label class="form-label" for="user-classes">Classes</label>
-            <input type="text" class="form-input" value="$classes" name="classes" id="classes" placeholder="ex. 100, 101, 102">
+            <input class="form-input" name="user-classes" id="user-classes" type="text" value="$classes" placeholder="ex. 100, 101, 102">
         </div>
         <div class="form-control">
             <input type="submit" class="form-button" value="Save">
         </div>
     </form>
+    HTML;
+
+    $output = $id == "new" ? $form : 
+        "<div class='grid gap'>
+            <div class='col-xs-12 col-md-7'>$display</div>
+            <div class='col-xs-12 col-md-5'>$form</div>
+        </div>
+        ";
+        
+    $delete = $id == "new" ? "" : "<a href='{$_SERVER['PHP_SELF']}?id=$id&action=delete'>Delete</a>";
+
+    echo <<<HTML
+
+    <nav class="display-flex">
+            <div class="flex-stretch"><a href="{$_SERVER['PHP_SELF']}">Back</a></div>
+            <div class="flex-none">$delete</div>
+
+    </nav>
+    $output
     HTML;
 }
 
@@ -76,7 +151,9 @@ function showUserPage($user) {
         <div class="flex-stretch"></div>
         <div class="nav nav-flex flex-none">
             <ul>
-                <li><a href="users.php">User List</a></li>
+                <li><a href="<?= $_SERVER['PHP_SELF'] ?>">User List</a></li>
+                <li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New User</a></li>
+
             </ul>
         </div>
     </div>
@@ -88,7 +165,7 @@ function showUserPage($user) {
     <?php
 
     if(isset($_GET['id'])) {
-       showUserPage($users[$_GET['id']]);
+       showUserPage($_GET['id'] == "new" ? $empty_user : $users[$_GET['id']]);
     }  else {
 
     ?>

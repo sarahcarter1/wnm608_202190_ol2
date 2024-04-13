@@ -52,8 +52,8 @@ $users_array = file_get_json("../data/users.json");
 
         for($i=0;$i<count($users);$i++) {
             echo "<li>
-                <strong>{$users[$i]->name}</strong>
-                <span>{$users[$i]->role}</span>
+                <strong>{$users_array[$i]->name}</strong>
+                <span>{$users_array[$i]->role}</span>
                 </li>";
 
         }

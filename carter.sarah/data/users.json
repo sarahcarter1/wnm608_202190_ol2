@@ -9,24 +9,31 @@
         "name":"Daniel Sours",
         "role":"Student",
         "email":"dsours@gmail.com",
-        "classes":[608,617,601,820]
+        "classes":[608,617,601]
     },
     {
         "name":"Kim Ibarra",
         "role":"Student",
         "email":"kibarra@gmail.com",
-        "classes":[608,617,601,820]
+        "classes":[608,617,601]
     },
     {
         "name":"Jasmine Han",
         "role":"Student",
         "email":"jhan@gmail.com",
-        "classes":[608,617,601,820]
+        "classes":[608,617,601]
     },
     {
         "name":"Elise Barsch",
         "role":"Student",
         "email":"ebarsch@gmail.com",
-        "classes":[608,617,601,820]
+        "classes":[608,617,601]
+    }
+    ,
+    {
+        "name":"Connie Tang",
+        "role":"Student",
+        "email":"ctang@gmail.com",
+        "classes":[608,617,601]
     }
 ]
