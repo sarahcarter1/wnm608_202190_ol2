@@ -139,7 +139,7 @@ function showUserPage($user) {
     <title>User Admin Page</title>
 
     <?php include "../parts/meta.php"; ?>
-    <?php include "../parts/csspractice.php";?>
+    <?php include "../parts/css.php";?>
    </head>
 <body>
     
@@ -178,8 +178,8 @@ function showUserPage($user) {
 
         for($i=0;$i<count($users);$i++) {
             echo "<li>
-                <a href='users.php?id=$i'>{$users[$i]->name}</a>
-                </li>";
+                <a href='admin/users.php?id=$i'>{$users[$i]->name}</a>
+            </li>";
         }
 
         ?>

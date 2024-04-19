@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+
+include_once "lib/php/functions.php";
+
+$product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+
+//print_p($product);
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -14,29 +23,44 @@
     <?php include "parts/navbar.php"; ?>
 
      <!-- Product Item -->  
-<div class="product_item">
-    <div class="display-flex flex-align-center">
-        <div class="flex-none">
-                <img src="img/placeholder_mug.jpg" alt="mug" class="product__img">    
+<div class="container_products">
+<div class="grid gap">
+        <div class="images-main">
+            <img src="img/<?=$product->images?>">
         </div>
-        <div class="flex-stretch">
-                <h1 class="product__heading">Product Item</h1>
-                <p class="product__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                <label for="form-select">Quantity</label>
-                <div class="form-select">
-                    <select>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
+        
+            <div class="card soft flat">
+                <div class="card-section">
+                    <h2 class="product-name"><?= $product->name ?></h2>
+                        <div class="product-price">&dollar;<?= $product->price ?></div>
                 </div>
-          
-                <button class="button" type="submit">Add To Cart</button>
+
+                <div class="card-section">
+                    <label for="product-amount" class="form-label">Amount</label>
+                        <div class="form-select" id="product-amount">
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                        </div>
+                            </div>
+                                <div class="card-section">
+                                    <a href="addtocart.php?id=<?= $product->id ?>" class="form-button">Add To Cart</a>
+                                </div>
+                            </div>
+                </div>
         </div>
-    </div>
 </div>
-<?php include "parts/footer.php";?>
-    
+
+<?php include "parts/footer.php";?>   
 </body>
+
 </html>

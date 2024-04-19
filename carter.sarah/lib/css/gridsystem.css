@@ -19,6 +19,14 @@
     .gap.xs-medium { --grid-gap:1em; }
     .gap.xs-small { --grid-gap:0.5em; }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.grid-item {
+    height: auto;
+}
 
 .col-1 { grid-column: span 1; }
 .col-2 { grid-column: span 2; }

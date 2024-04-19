@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,65 +19,44 @@
    
 
     <!-- Hero Section -->
-    <div class="hero" style="background-image:url('img/placeholder_hero1.jpg')"> 
+    <div class="hero" style="background-image:url('img/background3.jpg')"> 
         <div class="hero__content">
             <h1>Muggies</h1>
             <p>Mugs For Hugs</p>
-            <button class="button">Shop New In</button>
         </div>
     </div>
 
      <!-- Products Section -->  
      <div class="container_products">
      <h1>New Arrivals</h1>
+            <?php
 
-     <div class="grid gap">
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+include_once "lib/php/functions.php";
+include_once "parts/templates.php";
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+$result = makeQuery(
+    makeConn(),
+    "
+    SELECT *
+    FROM `products`
+    ORDER BY `price`
+    LIMIT 3
+    "
+);
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
 
-        </div>
-    </div>
+?>
+
 </div>    
+
      
 
          <!-- Newsletter Section -->
       <div class="newsletter">
         <div class="newsletter__content">
             <h1>Newsletter</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+            <p>Stay up to date on new mug releases. Sign up today!</p>
             <form action="#">
                 <div class="form__wrap">
                     <label for="email">
@@ -90,7 +71,7 @@
             
       <!--View Window--> 
 
-    <div class="view-window" style="background-image:url('img/placeholder_viewwindow.jpg')"> 
+    <div class="view-window" style="background-image:url('img/background4.jpg')"> 
     
     </div>
 
@@ -98,8 +79,8 @@
     <div class="about">
         <div class="about_content">
             <h1>About</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-            <img src="img/placeholder_about.jpg" alt="">
+            <h4>Founded in 2024, Muggies is a small vintage shop selling unique mugs based in San Francisco, California.</h4>
+            <img src="img/background5.jpg" alt="">
         </div>
     </div>
 

@@ -13,132 +13,38 @@
 
     <?php include "parts/navbar.php"; ?>
 
-   
-
     <!-- Hero Section -->
-    <div class="hero" style="background-image:url('img/placeholder_hero1.jpg')"> 
+    
+    <div class="hero" style="background-image:url('img/background2.jpg')"> 
         <div class="hero__content">
             <h1>Mugs</h1>
         </div>
     </div>
 
-     <!-- Products Section -->  
-<div class="container_products">
-        <div class="grid gap">
-            
-       
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
-        
+    <!--Products Section --> 
+   
+    <div class="container_products">
+        <h2>Product List</h2>
+        <?php
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+        include_once "lib/php/functions.php";
+        include_once "parts/templates.php";
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+        $result = makeQuery(
+            makeConn(),
+            "
+            SELECT *
+            FROM `products`
+            ORDER BY `price`
+            LIMIT 12
+            "
+        );
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+        echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
+        ?>
+</div>
 
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
-
-            <div class="col-xs-12 col-md-4">
-            <a href="product_item.php">
-                <figure class="figure product">
-                    <img src="img/placeholder_mug.jpg" alt="">
-                    <figcaption>
-                        <div class="productname">Product Name</div>
-                        <div class="price">Price</div>
-                    </figcaption>
-                </figure>
-            </a>
-            </div>
-
-        </div>
-    </div>
-</div>    
 
 <?php include "parts/footer.php";?>   
     
