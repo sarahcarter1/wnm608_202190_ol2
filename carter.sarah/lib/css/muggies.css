@@ -752,6 +752,10 @@ tbody {
     padding:0.5em;
 }
 
+.form-button.inline {
+    width:initial;
+}
+
 .form-button{
     padding: 1rem 3rem;
     border:none;

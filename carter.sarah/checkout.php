@@ -1,3 +1,9 @@
+<?php
+
+include_once "lib/php/functions.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,13 +70,12 @@
     </form>
 
 </div>
-<div>
 <a href="confirmation.php" class="form-button">Complete Checkout</a>
+</div>
 
 
+<?php include "parts/footer.php";?>
 
 </body>
-
-<?php include "parts/footer.php";?>   
 
 </html>

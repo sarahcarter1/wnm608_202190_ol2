@@ -1,3 +1,13 @@
+ <?php
+
+ include_once "lib/php/functions.php";
+
+ ?>
+ 
+ 
+ 
+ 
+ 
  <!-- Header header>h1+p -->
  <header class="navbar">
         <div class="container display-flex">
@@ -9,12 +19,12 @@
         <ul class="container display-flex">
             <li><a href="muggies.php">Home</a></li>
             <li><a href="product_list.php">Mugs</a></li>
-            <li><a href="account.php">Account</a></li>
-            <li><a href="cart.php">Cart</a></li>
+            <li><a href="cart.php">
+                <span>Cart</span>
+                <span class="badge"><?= makeCartBadge(); ?></span>
+            </a></li>
         </ul>
      </nav>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
     </header>
