@@ -707,6 +707,7 @@ tbody {
 .form-select>select,
 .hotdog input,
 .hotdog,
+.form-button-filter,
 .form-button,
 .form-input,
 .form-input-error,
@@ -756,6 +757,18 @@ tbody {
     width:initial;
 }
 
+.form-button-filter{
+    background: var(--color-black);
+    border-radius:4px;
+    margin-bottom:1em;
+    border:none;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    cursor:pointer;
+    text-align:center;
+    color:var(--color-white);
+}
+
 .form-button{
     padding: 1rem 3rem;
     border:none;
@@ -772,6 +785,7 @@ tbody {
 
 }
 
+.form-button-filter,
 .form-button:hover {
     background: rgb(40, 39, 39);
     color: var(--color-white);
