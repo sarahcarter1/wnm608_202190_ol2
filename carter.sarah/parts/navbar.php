@@ -23,6 +23,8 @@
                 <span>Cart</span>
                 <span class="badge"><?= makeCartBadge(); ?></span>
             </a></li>
+            <li><a href="admin/index.php">Admin</a></li>
+
         </ul>
      </nav>
     </div>

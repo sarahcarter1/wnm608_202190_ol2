@@ -2,6 +2,9 @@
  <?php
 
 include_once "lib/php/functions.php";
+include_once "parts/templates.php";
+
+
 
 ?>
 
@@ -33,23 +36,13 @@ include_once "lib/php/functions.php";
 
      <!-- Products Section -->  
      <div class="container_products">
-     <h1>New Arrivals</h1>
+     <h1>Latest Mugs</h1>
             <?php
 
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-$result = makeQuery(
-    makeConn(),
-    "
-    SELECT *
-    FROM `products`
-    ORDER BY `price`
-    LIMIT 3
-    "
-);
-
-echo "<div class='grid gap'>",array_reduce($result,'productListTemplate'),"</div>";
+recommendedCategory("white");
 
 ?>
 
