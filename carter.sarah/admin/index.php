@@ -219,9 +219,6 @@ HTML;
             <h1>Product Admin</h1>
         </div>
         <div class="flex-stretch"></div>
-            <div class="flex-none menu-button">
-                <label for="menu">&equiv;</label>
-            </div>
             <nav class="nav-flex flex-none nav">
                 <ul class="container display-flex">
                     <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
@@ -229,6 +226,7 @@ HTML;
                     <li><a href="muggies.php">Home</a></li>
                 </ul>
             </nav>
+        </div>
     </div>
 </header>
 
