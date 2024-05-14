@@ -74,11 +74,12 @@ recommendedCategory("white");
     </div>
 
     <!-- About Section -->
+    
     <div class="about">
         <div class="about_content">
-            <h1>About</h1>
-            <h4>Founded in 2024, Muggies is a small vintage shop selling unique mugs based in San Francisco, California.</h4>
-            <img src="img/background5.jpg" alt="">
+            <h1>About Us</h1>
+            <p>Founded in 2024, Muggies is a small vintage shop selling unique 
+                mugs based in San Francisco, California.</p>
         </div>
     </div>
 

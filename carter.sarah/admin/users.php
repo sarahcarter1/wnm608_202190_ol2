@@ -1,6 +1,6 @@
 <?php
 
-include"../lib/php/functions.php";
+include "../lib/php/functions.php";
 
 $filename = "../data/users.json";
 $users = file_get_json("../data/users.json");

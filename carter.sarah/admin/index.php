@@ -1,6 +1,6 @@
 <?php
 
-include "../lib/php/functions.php";
+
 
 $empty_product = (object) [
     "name"=>"Cat Mug",
@@ -14,7 +14,7 @@ $empty_product = (object) [
 
 
 
-
+include "../lib/php/functions.php";
 
 
 
@@ -23,6 +23,15 @@ $empty_product = (object) [
 
 try {
     $conn = makePDOConn();
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        echo 'Form submitted successfully!';
+        print_r($_POST);
+    } else {
+
+    }
+
+    if (isset($_GET['action'])) {
     switch($_GET['action']) {
         case "update":
             $statement = $conn->prepare("UPDATE
@@ -75,6 +84,9 @@ try {
             $statement->execute([$_GET['id']]);
             header("location:{$_SERVER['PHP_SELF']}");
             break;
+    }
+} else {
+
     }
 } catch(PDOException $e) {
     die($e->getMessage());
@@ -207,7 +219,7 @@ HTML;
             <h1>Product Admin</h1>
         </div>
         <div class="flex-stretch"></div>
-            <nav class="flex-none nav">
+            <nav class="nav-flex flex-none nav">
                 <ul class="container display-flex">
                     <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Product List</a></li>
                     <li><a href="<?= $_SERVER['PHP_SELF'] ?>?id=new">Add New Product</a></li>

@@ -22,6 +22,7 @@ $cart_product = cartItemById($_GET['id']);
 
      <!-- Cart-->  
 <div class="container_products">
+    <div class="form-control">
     <h2 class="title"> You added <?= $product->name ?> to your cart </h2>
     <p>There are now <?= $cart_product->amount ?> of  <?=$product->name ?> in your cart. </p>
 
@@ -34,9 +35,9 @@ $cart_product = cartItemById($_GET['id']);
         </div>
     </div>
 </div>
-    
+</div>
 
 <?php include "parts/footer.php";?>
-
 </body>
+
 </html>
